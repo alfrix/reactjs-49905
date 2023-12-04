@@ -1,6 +1,6 @@
 // Components
-import NavbarComponent from './components/NavbarComponent/NavbarComponent'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import NavbarComponent from './components/NavBar/NavBar'
+import ItemListContainer from './components/ItemListContainer'
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'

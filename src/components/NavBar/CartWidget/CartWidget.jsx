@@ -1,12 +1,13 @@
 import { Cart } from 'react-bootstrap-icons';
+import Button from 'react-bootstrap/Button';
 import './CartWidget.css'
 
 const CartWidget = () => {
   return (
     <div>
-      <a class="nav-link boton" href="#">
-          <Cart /> 0
-      </a>
+      <Button variant="primary" href="##">
+        <Cart className='icono'/> 0
+      </Button>{'  '}
     </div>
   )
 }

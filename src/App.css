@@ -16,3 +16,11 @@
 .navbar {
     padding: .75rem 10%;
 }
+
+button {
+    margin: 1em .5em;
+}
+
+body {
+    background-color: grey;
+}

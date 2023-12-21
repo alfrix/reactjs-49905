@@ -9,10 +9,10 @@ export const ItemDetailContainer = () => {
   const { productData } = useGetProductById(id);
 
   return (
-    <Card key={productData.id}>
-      <div className='d-flex'>
-        <Card.Img variant="top" src={productData.thumbnail} /> 
-        <Card.Body>
+    <Card key={productData.id}  className='m-5' >
+      <div className='d-flex align-content-center justify-content-center'>
+        <Card.Img style={{width: '70%'}} variant="top" src={productData.thumbnail} /> 
+        <Card.Body className='m-5'>
           <Card.Title>{productData.title} $ {productData.price}</Card.Title>
           <Card.Text>{productData.description}</Card.Text>
           <Button variant="primary">Agregar al carrito</Button>

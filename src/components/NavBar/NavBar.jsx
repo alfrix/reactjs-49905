@@ -1,23 +1,23 @@
-import CartWidget from './CartWidget/CartWidget';
-import { Boxes } from 'react-bootstrap-icons';
+import { CartWidget } from "./CartWidget/CartWidget";
+import { Boxes } from "react-bootstrap-icons";
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 
 import { useCategory } from "../../hooks/useProducts";
 
-
 function NavbarComponent() {
-
   const { category } = useCategory();
 
   return (
-    <Navbar expand='lg' className='bg-body-tertiary'>
+    <Navbar expand="sm" fixed="top" className="bg-body-tertiary">
       <Container>
-        <Link className='me-3 link-dark link-underline-opacity-0' to='/'><Boxes /> 3D2</Link>
+        <Link className="me-3 link-dark link-underline-opacity-0" to="/">
+          <Boxes /> 3D2
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -30,10 +30,11 @@ function NavbarComponent() {
                 );
               })}
             </NavDropdown>
-            {/* <Nav.Link href="#">Contacto</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
-        <CartWidget />
+        <Link to="/Cart">
+          <CartWidget />
+        </Link>
       </Container>
     </Navbar>
   );

@@ -1,28 +1,28 @@
-import { useEffect, useState } from 'react'
-import { getProducts, getProductById } from '../services'
-import { getCategories, getProductByCategory } from '../services'
+import { useEffect, useState } from "react";
+import { getProducts, getProductById } from "../services";
+import { getCategories, getProductByCategory } from "../services";
 
 export const useGetProducts = (limit) => {
-    const [productsData, setProductsData] = useState([]);
+  const [productsData, setProductsData] = useState([]);
 
-    useEffect(() => {
-        getProducts(limit)
-          .then((response) => {
-            setProductsData(response.data.products)
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      }, []);
+  useEffect(() => {
+    getProducts(limit)
+      .then((response) => {
+        setProductsData(response.data.products);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-      return { productsData }
-}
+  return { productsData };
+};
 
 export const useGetCategories = () => {
   useEffect(() => {
-    getCategories().then(response)
-  })
-}
+    getCategories().then(response);
+  });
+};
 
 export const useGetProductById = (id) => {
   const [productData, setProductData] = useState({});
@@ -30,16 +30,15 @@ export const useGetProductById = (id) => {
   useEffect(() => {
     getProductById(id)
       .then((response) => {
-        console.log(response)
-        setProductData(response.data)
+        setProductData(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
-  return { productData }
-}
+  return { productData };
+};
 
 export const useGetProductByCategory = (category) => {
   const [productsData, setProductsData] = useState([]);
@@ -47,15 +46,15 @@ export const useGetProductByCategory = (category) => {
   useEffect(() => {
     getProductByCategory(category)
       .then((response) => {
-        setProductsData(response.data.products)
+        setProductsData(response.data.products);
       })
       .catch((error) => {
         console.log(error);
       });
   }, [category]);
 
-  return { productsData }
-}
+  return { productsData };
+};
 
 export const useCategory = () => {
   const [category, setCategory] = useState([]);
@@ -66,5 +65,5 @@ export const useCategory = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  return { category }
+  return { category };
 };

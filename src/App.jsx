@@ -1,5 +1,6 @@
 // Components
 import { MainRouter } from './routers/MainRouter'
+import { CartProvider } from "./context/CartContext";
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -9,7 +10,9 @@ const App = () => {
 
   return (
     <div className='contenedor-principal'>
-      <MainRouter />
+      <CartProvider>
+        <MainRouter />
+      </CartProvider>
     </div>
   )
 }

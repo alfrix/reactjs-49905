@@ -7,10 +7,10 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 
-import { useCategory } from "../../hooks/useProducts";
+import { useGetCategories } from "../../hooks/useProducts";
 
 function NavbarComponent() {
-  const { category } = useCategory();
+  const { categories } = useGetCategories();
 
   return (
     <Navbar expand="sm" fixed="top" className="bg-body-tertiary">
@@ -22,7 +22,7 @@ function NavbarComponent() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              {category.map((item, index) => {
+              {categories.map((item, index) => {
                 return (
                   <NavDropdown.Item key={index}>
                     <Link to={`/category/${item}`}>{item}</Link>

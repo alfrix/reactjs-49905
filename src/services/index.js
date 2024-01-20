@@ -1,1 +1,2 @@
-export * from "./productsService";
+// Deprecated
+// export * from "./productsService";

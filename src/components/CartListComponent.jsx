@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import Card from "react-bootstrap/Card";
 import { useGetProductById } from "../hooks/useProducts";

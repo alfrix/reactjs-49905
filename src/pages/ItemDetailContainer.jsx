@@ -8,6 +8,7 @@ export const ItemDetailContainer = () => {
   const { id } = useParams();
 
   const { productData } = useGetProductById(id);
+  console.log(productData)
 
   return (
     <Card key={productData.id} className="m-5">

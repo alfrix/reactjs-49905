@@ -1,4 +1,4 @@
-# Proyecto tienda/ecommerce
+# Proyecto mock de tienda/ecommerce
 
 Hecho con ReactJS + Vite
 
@@ -13,3 +13,8 @@ npm install
 ```sh
 npm run dev
 ```
+
+Aparte de lo pedido se usó
+
+Bootstrap: para agilizar el estilo visual
+Axios: para simplificar el fetch

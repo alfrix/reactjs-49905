@@ -16,5 +16,7 @@ npm run dev
 
 Aparte de lo pedido se usó
 
-Bootstrap: para agilizar el estilo visual
-Axios: para simplificar el fetch
+Bootstrap: para agilizar la creacion del estilo visual
+Formik y yup: para hacer y validar el formulario de checkout
+
+en una primera instancia se uso Axios para simplificar el fetch pero al pasar a Firebase quedo deprecado

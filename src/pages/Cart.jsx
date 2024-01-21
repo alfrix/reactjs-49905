@@ -1,6 +1,7 @@
 import Card from "react-bootstrap/Card";
 import { CartListComponent } from "../components/CartListComponent";
 import { Cart as CartIcon } from "react-bootstrap-icons";
+import { CheckoutForm } from "../components/CheckoutForm";
 
 export const Cart = () => {
   return (
@@ -10,6 +11,7 @@ export const Cart = () => {
           Carrito <CartIcon style={{ paddingBottom: "0.2rem" }} />
         </Card.Header>
         <CartListComponent />
+        <CheckoutForm />
       </Card>
     </div>
   );
